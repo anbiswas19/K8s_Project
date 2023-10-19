@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+        - name: photogenie-webapp
+          image: anbiswas91/pipeline-demo:v1.18
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
