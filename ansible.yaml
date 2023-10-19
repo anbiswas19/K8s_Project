@@ -1,5 +1,5 @@
 - hosts: 20.169.246.238
-  become: true
+  become_user: anbiswas 
   tasks:
     #- name: Delete old Deployment
     #  command: kubectl delete -f /home/anbiswas/deployment.yaml
