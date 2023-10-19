@@ -6,6 +6,6 @@
     #- name: Delete old Service
     #  command: kubectl delete -f /home/anbiswas/service.yaml
     - name: Create new Deployment
-      command: kubectl apply -f /home/anbiswas/deployment.yaml
+      command: minikube kubectl -- apply -f /home/anbiswas/deployment.yaml
     - name: Create new Service
-      command: kubectl apply -f /home/anbiswas/service.yaml
+      command: minikube kubectl -- apply -f /home/anbiswas/service.yaml
