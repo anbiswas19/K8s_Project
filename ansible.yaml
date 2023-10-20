@@ -1,11 +1,11 @@
 - hosts: 20.169.246.238
   become_user: anbiswas 
   tasks:
-    #- name: Delete old Deployment
-    #  command: kubectl delete -f /home/anbiswas/deployment.yaml
-    #- name: Delete old Service
-    #  command: kubectl delete -f /home/anbiswas/service.yaml
+    - name: Delete old Deployment
+      command: kubectl delete -f deployment.yaml
+    - name: Delete old Service
+      command: kubectl delete -f service.yaml
     - name: Create new Deployment
-      command: kubectl apply -f /home/anbiswas/deployment.yaml
+      command: kubectl apply -f deployment.yaml
     - name: Create new Service
-      command: kubectl apply -f /home/anbiswas/service.yaml
+      command: kubectl apply -f service.yaml
