@@ -11,5 +11,5 @@ spec:
       nodePort: 30080
   selector:
     app: webapp-svc
-  type: LoadBalancer
+  type: NodePort
   
